@@ -52,3 +52,21 @@ let isAuthenticated = true;
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 
 console.log("Authentication Status:", authenticationStatus);
+
+// Practice task
+let access;
+if (userType === 'employee' || userType === 'admin' || userType === 'manager'){
+    access = "Access to Dietary Services";
+}
+else if(userType === 'enrolled_member'){
+    access = "Access to Dietary Services and one-on-one interaction with a dietician";
+}
+else if(userType === 'subscriber'){ 
+    access = "Access to Dietary Services";
+}else if(userType === 'non-subscriber'){
+    access = "You need to enroll or at least subscribe first to avail this facility";
+}else{
+    access = "Error, You are an incorrect user type";
+}
+
+console.log(access);
